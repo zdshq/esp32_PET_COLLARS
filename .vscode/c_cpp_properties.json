@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-IDF",
+            "compilerPath": "e:\\ESP\\tools\\xtensa-esp32s3-elf\\esp-2021r2-patch2-8.4.0\\xtensa-esp32s3-elf\\bin\\xtensa-esp32s3-elf-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "includePath": [
+                "${config:idf.espIdfPath}/components/**",
+                "${config:idf.espIdfPathWin}/components/**",
+                "${config:idf.espAdfPath}/components/**",
+                "${config:idf.espAdfPathWin}/components/**",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/components/**",
+                "E:/ESP/esp-idf/examples/common_components/protocol_examples_common/include/**"
+            ],
+            "browse": {
+                "path": [
+                    "${config:idf.espIdfPath}/components",
+                    "${config:idf.espIdfPathWin}/components",
+                    "${config:idf.espAdfPath}/components/**",
+                    "${config:idf.espAdfPathWin}/components/**",
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/components/**",
+                    "E:/ESP/esp-idf/examples/common_components/protocol_examples_common/**"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

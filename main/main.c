@@ -378,6 +378,7 @@ static void mp3_play(void *param)
             len = xMessageBufferReceive(xMessageBuffer,a,512,1000);
             playChunk(&dev, (uint8_t *)a, len);
             memset(a,0,512);
+            printf("111\r\n");
         }  
         vTaskDelay(1);
     }
@@ -491,7 +492,7 @@ void app_main() {
     // vTaskDelay(1000);
     xTaskCreate(&wifi_init_sta, "connecting",512*6,NULL,5,NULL);
     xTaskCreate(&tcp_SAR,"tcp send recieve",512*8,NULL,5,NULL);
-    // xTaskCreate(&mp3_play,"mp3 play",512*6,NULL,5,NULL);
+    xTaskCreate(&mp3_play,"mp3 play",512*6,NULL,5,NULL);
     // xTaskCreate(&uart_re,"UART receive",512*5,NULL,5,NULL);
     // xTaskCreate(&ga6_task,"ga6",1024*5,NULL,5,NULL);
     // xTaskCreate(&getsportStatus, "sports",1024*5,NULL,8,NULL);
